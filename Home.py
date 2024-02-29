@@ -3,8 +3,8 @@ from pathlib import Path
 from streamlit_lottie import st_lottie
 import requests
 import streamlit as st
-import st_pages
-from st_pages import show_pages, Page
+# import st_pages
+# from st_pages import show_pages, Page
 
 # show_pages([
 #     Page("Home.py", "Home"),
