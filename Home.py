@@ -3,6 +3,14 @@ from pathlib import Path
 from streamlit_lottie import st_lottie
 import requests
 import streamlit as st
+import st_pages
+from st_pages import show_pages, Page
+
+# show_pages([
+#     Page("Home.py", "Home"),
+#     Page("pages/About_Chat_Application.py", "About Chat Application")
+# ])
+
 st.set_page_config(page_title="Haripriya Rajendran", page_icon="🕵️‍♀️", layout="wide", menu_items={'Get Help': 'https://www.extremelycoolapp.com/help'}) #emoji taken from webfx 
 
 st.markdown("""
@@ -27,6 +35,17 @@ python_lottie = load_lottieurl("https://assets6.lottiefiles.com/packages/lf20_2z
 my_sql_lottie = load_lottieurl("https://assets4.lottiefiles.com/private_files/lf30_w11f2rwn.json")
 ml_lottie = load_lottieurl("https://lottie.host/30f7a673-5d1a-4a83-b694-0361c985b506/Ik5pQjtkjb.json")
 
+
+with st.container():
+    openai_api_key = st.sidebar.text_input(
+        label="Enter your OpenAI API key", type="password"
+    )
+    if openai_api_key.startswith('sk-'):
+        pass
+    else:
+        st.sidebar.warning("Please add your OpenAI API key to to use the chatbot.", icon = "ℹ")
+    st.sidebar.write("----")
+
 with st.container():
     st.sidebar.image("images/my-image.jpg")
     st.sidebar.title("Haripriya Rajendran 🤓")
@@ -50,6 +69,11 @@ with st.container():
             with column:
                 st_lottie(dict_of_lotties[list(dict_of_lotties.keys())[index]], height=70,width=70, key=list(dict_of_lotties.keys())[index], speed=2.5)
 
+
+with st.container():
+    input_text = st.text_input("Please provide OpenAI API Key on the sidebar. Once done, you can ask questions about me to my AI assistant!", key="input")
+
+
 # ---- ABOUT SECTION ----
 with st.container():
     st.header("About 🗒")
@@ -58,15 +82,6 @@ with st.container():
         "A passionate Data Scientist with 6 years of overall experience with 4.5 years of experience in Machine Learning, Data Analysis and Data Science in FinTech.  \n\nI have worked in Applied Data Finance as a Lead Data Scientist where I have worked on end-to-end model building pipeline in which I figured out the need for the model, performed feature engineering, built multiple models to predict risk/fraud of a customer after performing statistical analysis, compiled a scorecard that works the best for the current scenario, implemented and deployed models in production."
     )
 
-with st.container():
-    openai_api_key = st.sidebar.text_input(
-        label="Enter your OpenAI API key"
-    )
-    if openai_api_key.startswith('sk-'):
-        pass
-    else:
-        st.sidebar.warning("Please add your OpenAI API key to continue.", icon = "ℹ")
-        # st.stop()
 
 with st.container():
     st.write("---")
@@ -154,6 +169,8 @@ with st.container():
             - Matplotlib, Seaborn, plotly
             - Tensor Flow and Keras
             - Optuna, Ray and MLFlow
+            - langchain, streamlit, pinecone
+            - OpenAI
             - joblib and pickle
             - joblib-Parallel-delayed
             - pycopg2, pymysql, pymongo, sqlalchemy
@@ -187,7 +204,7 @@ with st.container():
                 - Recurrent Neural Network (basics)""")
         st.subheader("Tools and Platform")
         st.write("""
-                - Tableau
+                - Tableau Server and Desktop
                 - MS Office Suite (Word, Excel, Powerpoint
                 - Visual Studio Code
                 - Streamlit
@@ -252,16 +269,14 @@ with st.container():
                 </a>
             </div>
             <div class="col-md-4 mb-4">
-                <a href="https://rpubs.com/haripriya_rhp/cyclistic-case-study"
+                <a href="About_Chat_Application" target='_self'
                     class="text-decoration-none">
                     <div class="card project-card position-relative">
                         <img src='data:image/png;base64,{2}'
                             class="card-img-top" alt="Project 1 Image">
-                        <div class="project-name">Case study - cyclistic bike
-                            share analysis</div>
+                        <div class="project-name">Chat Application Project using RAG with LangChain and OpenAI</div>
                         <div class="card-body">
-                            <h5 class="card-title d-none">Case study - cyclistic
-                                bike share analysis</h5>
+                            <h5 class="card-title d-none">Chat Application Project using RAG with LangChain and OpenAI</h5>
                             <p class="card-text text-light">
                                 For Google Data Analytics Course, I have
                                 completed the case study on a fictional company
@@ -279,7 +294,10 @@ with st.container():
                     """.format(
       img_to_bytes("images/google-advanced.jpg"),img_to_bytes("images/cyclistic-bike-share.png"), img_to_bytes("images/GenAI.png")
     ),unsafe_allow_html=True)
-            
+
+
+# with 
+
 # st.footer
     
 
