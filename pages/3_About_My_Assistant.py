@@ -64,10 +64,10 @@ st.write("""
          9. Chat history messages are stored in sqllite.
 """)
 
-st.subheader("Demo Video")
-video_file = open('images/demo_video_2.mp4', 'rb')
-video_bytes = video_file.read()
-st.video(video_bytes)
+# st.subheader("Demo Video")
+# video_file = open('images/demo_video_2.mp4', 'rb')
+# video_bytes = video_file.read()
+# st.video(video_bytes)
 
 st.subheader("FAQ")
 st.write("""***Why did I use ConversationalBufferMemory instead of ConversationalSummaryMemory?***""")
