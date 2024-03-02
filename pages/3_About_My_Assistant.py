@@ -60,15 +60,14 @@ st.write("""
 st.subheader("Project Details")
 st.write("""Streamlit is the framework used to host my web application. I used Langchain framework to easily access mutliple other frameworks.""")
 st.write("""
-         1. Initially, I uploaded my resume pdf to a folder.
-         2. Then, I have created the Embeddings for the pdf using HuggingFaceEmbeddings.
-         3. I have stored the embeddings as vectors to the Pinecone Vector database.
-         4. Once the index is created, I created a chatbot page using streamlit.
-         5. Fetched the index from pinecone and is provided as a context to the prompt.
-         6. The LLM model used here is ***gpt-3.5-turbo-0125*** from OpenAI.
-         7. I also have configured ConversationalBufferMemory to maintain and use the chat history in prompts.
-         8. Session is also maintained to show the chat history.
-         9. Chat history messages are stored in sqllite.
+         1. Initially, I created the Embeddings for my resume pdf version using HuggingFaceEmbeddings.
+         2. I have stored the embeddings as vectors to the Pinecone Vector database.
+         3. Once the index is created, I created a chatbot page using streamlit.
+         4. Fetched the index from pinecone and is provided as a context to the prompt.
+         5. The LLM model used here is ***gpt-3.5-turbo-0125*** from OpenAI.
+         6. I also have configured ConversationalBufferMemory to maintain and use the chat history in prompts.
+         7. Session is also maintained to show the chat history.
+         8. Chat history messages are stored in sqllite.
 """)
 
 st.subheader("Demo Video")
