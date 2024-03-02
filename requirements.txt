@@ -1,4 +1,9 @@
-htbuilder==0.6.2
+langchain==0.1.10
+langchain_community==0.0.25
+langchain_openai==0.0.8
+openai==1.13.3
+pinecone==0.1.0
+python-dotenv==1.0.1
 Requests==2.31.0
 streamlit==1.31.1
 streamlit_lottie==0.0.5

@@ -1,0 +1,5 @@
+*.env
+files/
+local_sqlite_db.db
+some_additional.txt
+.vscode/
