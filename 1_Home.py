@@ -202,7 +202,7 @@ with st.container():
         <div class="container">
             <div class="row">
                 <div class="col-md-4 mb-4">
-                    <a href="3_About_My_Assistant" target='_self'
+                    <a href="About_My_Assistant" target='_self'
                         class="text-decoration-none">
                         <div class="card project-card position-relative">
                             <img src='data:image/png;base64,{2}'
