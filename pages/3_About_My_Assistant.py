@@ -5,6 +5,13 @@ import streamlit as st
 from streamlit_lottie import st_lottie
 
 st.set_page_config(page_title="About My AI Assistant", page_icon="🤖", layout="wide")
+st.markdown("""
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+            <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+            """, unsafe_allow_html=True)
+with open('assets/css/styles.css') as f:
+        st.markdown(f"""<style>{f.read()}""", unsafe_allow_html=True)
+
 st.header("My AI Assistant in my portfolio")
 
 def load_lottieurl(url: str):
