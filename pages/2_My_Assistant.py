@@ -72,7 +72,7 @@ with st.container():
     if not openai_api_key.startswith('sk-') or not username:
         # st.sidebar.warning("Please add your OpenAI API key to use the chatbot. Username is necessary to maintain chat history.", icon = "ℹ")
         # st.warning("Please add your OpenAI API key to use the chatbot. Username is necessary to maintain chat history.", icon = "ℹ")
-        st.info("Please add your OpenAI API key in the sidebar on the left to use the chatbot. Username is also necessary to maintain and retrieve your chat history. Please give a unique id or name if possible.", icon = "ℹ")
+        st.info("Please add your OpenAI API key in the sidebar on the left to use the chatbot. Username is also necessary to maintain and retrieve your chat history. Please give a unique id or name if possible. To open sidebar in the mobile, click on the arrow at the top left.", icon = "ℹ")
     
     button_status = st.sidebar.button("Clear message history")
 
