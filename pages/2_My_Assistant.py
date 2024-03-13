@@ -140,7 +140,7 @@ if username and openai_api_key.startswith('sk-'):
         st.chat_message("user").write(user_query)
 
         # user_query+=' If the number of words limit is given already, brief the answer into that number. Otherwise, brief it in at most 35 words. '
-        user_query += 'Brief it in at most 35 words or the count limit given in the previous sentence.'
+        user_query += ' Brief it in at most 35 words or the count limit given in the previous sentence.'
 
         with st.chat_message("assistant"):
             retrieval_handler = PrintRetrievalHandler(st.container())
