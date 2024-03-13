@@ -54,11 +54,11 @@ st.write("""
         2. Langchain
         3. OpenAI API
         4. PineCone Vector Database
-        5. HuggingFaceEmbeddings
+        5. HuggingFace Embeddings
         """)
 
 st.subheader("Project Details")
-st.write("""Streamlit is the framework used to host my web application. I used Langchain framework to easily access mutliple other frameworks.""")
+st.write("""Streamlit is the framework used to host my web application. I used Langchain framework to easily access multiple other frameworks.""")
 st.write("""
          1. Initially, I created the Embeddings for my resume pdf version using HuggingFaceEmbeddings.
          2. I have stored the embeddings as vectors to the Pinecone Vector database.
@@ -84,10 +84,9 @@ st.image("images/memory.png", width = 800)
 st.subheader("How to use?")
 st.write("""
     1. Type any query/prompt that you need to know about me to the chatbot.
-    2. The code already limits the response to 50 words. If you want to limit the words or add the number of words, please mention it along with the query. But, because of the GPT's drawback of not being able to count the words properly. The word count might get higher. With testing, I found that it mostly did not exceed the 50 words limit I have povided here.
-    3. It uses the context I have given and will reply in sometime.
-    4. As simple as that!
-    5. Please be aware of the disclaimer that Using this chatbot can cost around \\$0.01 to \\$0.05 per query (depends on the query). It also stores and uses the previous questions to prompt each question. So, use it based on your available OpenAI API quota.
+    2. The code already limits the response to 50 words. If you want to limit the words or add the number of words, please mention it along with the query. But, because of the GPT's drawback of not being able to count the words properly, the word count might get higher. With testing, I found that it mostly did not exceed the 50 words limit I have mentioned here.
+    3. It uses the context I have given and will reply in sometime. As simple as that!
+    5. Please be aware of the disclaimer that using this chatbot can cost around \\$0.01 to \\$0.05 per query (depends on the query). It also stores and uses the previous questions to prompt each question. So, use it based on your available OpenAI API quota.
 """)
 
 st.subheader("Queries or suggestions?")
