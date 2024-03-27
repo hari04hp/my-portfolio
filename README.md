@@ -1,8 +1,14 @@
 ### How to run locally:
 
 Upload a file under files
-```pip install -r requirements.txt```
-```streamlit run 1_Home.py```
+
+1. ```pip install -r requirements.txt```
+2. ```streamlit run 1_Home.py```
+
+Create a .env file in the project directory and add:
+* PINECONE_API_KEY=Your Pinecone API key
+* PINECONE_ENV=Your Pinecone environment name (e.g., "dev")
+
 
 ## Pages
 1. Home page is my portfolio describing about me, Haripriya Rajendran.
