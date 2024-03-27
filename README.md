@@ -1,6 +1,7 @@
 ### How to run locally:
-Upload a file under files
 
+Upload a file under files
+```pip install -r requirements.txt```
 ```streamlit run 1_Home.py```
 
 ## Pages

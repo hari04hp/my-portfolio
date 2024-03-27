@@ -58,7 +58,7 @@ with st.container():
     st.header("About 🗒")
     # st.title("Data Scientist and AI enthusiast")
     st.write(
-        "A passionate Data Scientist with 6 years of overall experience with 4.5 years of experience in Machine Learning, Data Analysis and Data Science in FinTech.  \n\nI have worked in Applied Data Finance as a Lead Data Scientist where I have worked on end-to-end model building pipeline in which I figured out the need for the model, performed feature engineering, built multiple models to predict risk/fraud of a customer after performing statistical analysis, compiled a scorecard that works the best for the current scenario, implemented and deployed models in production."
+        "A passionate Data Scientist with 6 years of overall experience with 4.5 years of experience in Machine Learning, Data Analysis and Data Science in FinTech.  \n\nI have worked in Applied Data Finance as a Lead Data Scientist on end-to-end model building pipeline where I figured out the need for the model, performed feature engineering, built multiple models to predict risk/fraud of a customer after performing statistical analysis, compiled a scorecard that works the best for the current scenario, implemented and deployed models in production. Developed and implemented risk management strategies and optimized portfolio performance.\n\nA strong communicator and collaborator with a proven ability to work independently and as part of a team."
     )
 
 with st.container():
