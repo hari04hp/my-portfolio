@@ -3,6 +3,7 @@ from pathlib import Path
 from streamlit_lottie import st_lottie
 import requests
 import streamlit as st
+import streamlit.components.v1 as components
 
 st.set_page_config(page_title="Haripriya Rajendran", page_icon="🕵️‍♀️", layout="wide") #emoji taken from webfx 
 
@@ -50,7 +51,7 @@ with st.container():
 
 with st.container():
     st.header("My AI Assistant 🤖")
-    st.page_link("pages/2_My_Assistant.py", label="Click on this link to go to my Chatbot Assistant page.")
+    st.page_link("pages/2_My_Assistant.py", label="Click on this link to go to my Chatbot Assistant page.", icon = "🔗")
 
 # ---- ABOUT SECTION ----
 with st.container():
@@ -60,6 +61,7 @@ with st.container():
     st.write(
         "A passionate Data Scientist with 6 years of overall experience with 4.5 years of experience in Machine Learning, Data Analysis and Data Science in FinTech.  \n\nI have worked in Applied Data Finance as a Lead Data Scientist on end-to-end model building pipeline where I figured out the need for the model, performed feature engineering, built multiple models to predict risk/fraud of a customer after performing statistical analysis, compiled a scorecard that works the best for the current scenario, implemented and deployed models in production. Developed and implemented risk management strategies and optimized portfolio performance.\n\n As an adept learner, I learnt and developed skills on Data Science and Machine Learning through online certification courses and participating in ML hackathons. Then, implemented that knowledge in the current organization and realized its real time value as a Data Scientist."
     )
+    st.markdown('''<div style="font-size: 20px; font-style: italic"> Also, look at recommendations section at my <a href="https://www.linkedin.com/in/haripriyar" class="text-decoration-none text-light"><i class="fab fa-linkedin contact-icons1" style="font-size: 20px;"></i></a> page to know more about me through my colleagues' point of view ! </div>''', unsafe_allow_html=True)
 
 with st.container():
     st.write("---")
