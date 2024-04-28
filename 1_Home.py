@@ -150,6 +150,7 @@ with st.container():
             - Tensor Flow and Keras
             - Optuna, Ray and MLFlow
             - langchain, streamlit, pinecone
+            - LangChain Function/Tool Calling
             - OpenAI
             - joblib and pickle
             - joblib-Parallel-delayed
@@ -255,13 +256,29 @@ with st.container():
                         </div>
                     </a>
                 </div>
+                <div class="col-md-4 mb-4">
+                    <a href="https://github.com/hari04hp/langchain-weather-tool-calling/blob/main/demo/Capture_1.png"
+                        class="text-decoration-none">
+                        <div class="card project-card position-relative">
+                            <img src='data:image/png;base64,{3}'
+                                class="card-img-top" alt="Project 2 Image">
+                            <div class="project-name"> Conversatonal Weather Agent with LangChain Tool Calling</div>
+                            <div class="card-body">
+                                <h5 class="card-title d-none">Case study - cyclistic
+                                    bike share analysis</h5>
+                                <p class="card-text text-light">
+                                    A conversational weather agent using LangChain tool calling to answer natural language queries about current weather and 5-day forecast for any city/zipcode.</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
             </div>
         </div>
     </div>
                             
                         """.format(
-        img_to_bytes("images/google-advanced.jpg"),img_to_bytes("images/cyclistic-bike-share.png"), img_to_bytes("images/GenAI.png")
-        ),unsafe_allow_html=True)
+        img_to_bytes("images/google-advanced.jpg"),img_to_bytes("images/cyclistic-bike-share.png"), img_to_bytes("images/GenAI.png"),
+        img_to_bytes("images/weather-langchain.jpeg")),unsafe_allow_html=True)
 
 with st.sidebar.container():
     st.sidebar.markdown("""<p style="font-size:12px;">App is created using streamlit. Images are taken online. Emojis are taken from webfx. Lottie animations also have been used. </p>""", unsafe_allow_html=True)
