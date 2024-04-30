@@ -262,7 +262,7 @@ with st.container():
                         <div class="card project-card position-relative">
                             <img src='data:image/png;base64,{3}'
                                 class="card-img-top" alt="Project 2 Image">
-                            <div class="project-name"> Conversatonal Weather Agent with LangChain Tool Calling</div>
+                            <div class="project-name"> Conversational Weather Agent with LangChain Tool Calling</div>
                             <div class="card-body">
                                 <h5 class="card-title d-none">Case study - cyclistic
                                     bike share analysis</h5>
