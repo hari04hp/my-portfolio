@@ -34,6 +34,7 @@ with st.container():
     st.sidebar.image("images/my-image-2.jpg")
     st.sidebar.title("Haripriya Rajendran 🤓")
     st.sidebar.header("Data Scientist 👩‍💻")
+    st.sidebar.subheader("Greater Sacramento, California, United States")
     
     with st.sidebar:
         columns = st.columns(2)
