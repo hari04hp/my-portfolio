@@ -5,7 +5,7 @@ import requests
 import streamlit as st
 import streamlit.components.v1 as components
 
-st.set_page_config(page_title="Haripriya Rajendran", page_icon="🕵️‍♀️", layout="wide") #emoji taken from webfx 
+st.set_page_config(page_title="Haripriya Rajendran", page_icon="🕵️‍♀️", layout="wide",) #emoji taken from webfx 
 
 st.markdown("""
             <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
@@ -29,13 +29,21 @@ python_lottie = load_lottieurl("https://assets6.lottiefiles.com/packages/lf20_2z
 my_sql_lottie = load_lottieurl("https://assets4.lottiefiles.com/private_files/lf30_w11f2rwn.json")
 ml_lottie = load_lottieurl("https://lottie.host/30f7a673-5d1a-4a83-b694-0361c985b506/Ik5pQjtkjb.json")
 
-
+st.markdown('<style>div.block-container{padding-top:1.5rem;}</style>', unsafe_allow_html=True)
 with st.container():
+    st.sidebar.markdown(
+            f'''
+            <style>
+            [data-testid=stSidebarUserContent] [data-testid=stVerticalBlock]
+                {{
+                    gap:0rem;
+                }}
+            </style>
+            ''',unsafe_allow_html=True)
     st.sidebar.image("images/my-image-2.jpg")
-    st.sidebar.title("Haripriya Rajendran 🤓")
+    st.sidebar.title("Haripriya Rajendran 🤓",)
     st.sidebar.header("Data Scientist 👩‍💻")
-    st.sidebar.subheader("Greater Sacramento, California, United States")
-    
+    st.sidebar.subheader("Greater Sacramento, California")
     with st.sidebar:
         columns = st.columns(2)
         columns[i:=0].markdown("""
