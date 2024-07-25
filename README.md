@@ -1,6 +1,6 @@
-# Project is hosted at https://haripriya-rajendran-portfolio.streamlit.app/
+### Project is hosted at https://haripriya-rajendran-portfolio.streamlit.app/
 
-### How to run locally:
+## How to run locally:
 
 Upload a file under files
 
