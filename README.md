@@ -26,7 +26,9 @@ Create a .env file in the project directory and add:
 - https://blog.streamlit.io/land-your-dream-job-build-your-portfolio-with-streamlit/#step-2-build-your-chatbot
 - https://www.pinecone.io/learn/series/langchain/langchain-retrieval-augmentation/
 
-## Licenses:
+## Hosting path:
+https://haripriya-rajendran-portfolio.streamlit.app/
 
+## Licenses:
 This project is licensed under the MIT License - see the LICENSE file for details.
 
