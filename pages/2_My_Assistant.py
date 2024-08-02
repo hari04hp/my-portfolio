@@ -121,7 +121,7 @@ if username and openai_api_key.startswith('sk-'):
     
     # Setup LLM and QA chain
     llm = ChatOpenAI(
-        model_name="gpt-3.5-turbo-0125", openai_api_key=openai_api_key, temperature=0, streaming=True
+        model_name="gpt-4o-mini", openai_api_key=openai_api_key, temperature=0, streaming=True
     )#, max_tokens=35
     
     #with chat history

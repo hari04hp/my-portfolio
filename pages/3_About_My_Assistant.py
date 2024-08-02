@@ -64,7 +64,7 @@ st.write("""
          2. I have stored the embeddings as vectors to the Pinecone Vector database.
          3. Once the index is created, I created a chatbot page using streamlit.
          4. Fetched the index from pinecone and is provided as a context to the prompt.
-         5. The LLM model used here is ***gpt-3.5-turbo-0125*** from OpenAI.
+         5. The LLM model used here is ***gpt-4o-mini*** from OpenAI.
          6. I also have configured ConversationalBufferMemory to maintain and use the chat history in prompts.
          7. Session is also maintained to show the chat history.
          8. Chat history messages are stored in sqllite.
@@ -86,7 +86,7 @@ st.write("""
     1. Type any query/prompt that you need to know about me to the chatbot.
     2. The code already limits the response to 35 words. If you want to limit the words or add the number of words, please mention it along with the query. But, because of the GPT's drawback of not being able to count the words properly, the word count might get higher. With testing, I found that it mostly did not exceed the 35 words limit I have mentioned here.
     3. It uses the context I have given and will reply in sometime. As simple as that!
-    5. Please be aware of the disclaimer that using this chatbot can cost around \\$0.01 to \\$0.05 per query (depends on the query). It also stores and uses the previous questions to prompt each question. So, use it based on your available OpenAI API quota.
+    5. Please be aware of the disclaimer that using this chatbot can cost around \\$0.01 to \\$0.05 per query (depends on the query and also slightly lesser than that now because I updated to gpt-4o-mini). It also stores and uses the previous questions to prompt each question. So, use it based on your available OpenAI API quota.
 """)
 
 st.subheader("Queries or suggestions?")
