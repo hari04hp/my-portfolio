@@ -1,0 +1,4 @@
+1. Install conda
+2. create new environment
+3. Install pip
+4. pip install -r requirements.txt
