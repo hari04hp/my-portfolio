@@ -1,7 +1,7 @@
 import requests
 import streamlit as st
 from langchain.chains.conversation.memory import ConversationBufferMemory
-from langchain_community.embeddings import HuggingFaceEmbeddings
+from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_community.vectorstores import Pinecone as pc_vector
 from langchain.chains import ConversationalRetrievalChain
 from langchain.callbacks.base import BaseCallbackHandler
@@ -113,7 +113,7 @@ if username and openai_api_key.startswith('sk-'):
     db_path = 'local_sqlite_db.db'
     msgs = SQLChatMessageHistory(
         session_id=username,
-        connection_string="sqlite:///" + db_path  # This is the SQLite connection string
+        connection="sqlite:///" + db_path  # This is the SQLite connection string
     )
     
     index_name = "my-portfolio"
