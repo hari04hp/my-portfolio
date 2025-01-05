@@ -42,9 +42,9 @@ class PrintRetrievalHandler(BaseCallbackHandler):
     def __init__(self, container):
         self.status = container.status("**Context Retrieval**")
 
-    def on_retriever_start(self, serialized: dict, query: str, **kwargs):
-        self.status.write(f"**Question:** {query}")
-        self.status.update(label=f"**Context Retrieval:** {query}")
+    def on_retriever_start(self, serialized: dict, question: str, **kwargs):
+        self.status.write(f"**Question:** {question}")
+        self.status.update(label=f"**Context Retrieval:** {question}")
 
     def on_retriever_end(self, documents, **kwargs):
         for idx, doc in enumerate(documents):
@@ -146,7 +146,8 @@ if username and openai_api_key.startswith('sk-'):
             retrieval_handler = PrintRetrievalHandler(st.container())
             stream_handler = StreamHandler(st.empty())
             try:
-                response = qa_chain.run(user_query, callbacks=[retrieval_handler, stream_handler])
+                # response = qa_chain.run(user_query, callbacks=[retrieval_handler, stream_handler])
+                response = qa_chain.invoke({"question":user_query}, {"callbacks" :[retrieval_handler, stream_handler]})
             except AuthenticationError as e:
                 if e.code == 'invalid_api_key':
                     st.error("Please enter a valid API key.")
