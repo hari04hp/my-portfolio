@@ -129,7 +129,7 @@ if username and openai_api_key.startswith('sk-'):
         llm, retriever=configure_retriever(index_name), memory=memory, verbose=True
     )
     # qa_chain = 
-    print(msgs.messages)
+    # print(msgs.messages)
     if len(msgs.messages) == 0 or button_status:
         msgs.clear()
         msgs.add_ai_message("How can I help you?")
