@@ -43,7 +43,7 @@ with st.container():
     st.sidebar.image("images/my-image-2.jpg")
     st.sidebar.title("Haripriya Rajendran 🤓",)
     st.sidebar.header("Data Scientist 👩‍💻")
-    st.sidebar.subheader("Greater Sacramento, California")
+    st.sidebar.subheader("California, United States")
     with st.sidebar:
         columns = st.columns(2)
         columns[i:=0].markdown("""
@@ -78,24 +78,48 @@ with st.container():
     left_column, right_column = st.columns(2)
     with left_column:
         st.write("""
+            - GenerativeAI
+            - Prompt Engineering
+            - OpenAI API using LangChain
+            - Tool/Agent Calling with LLM
+            - Retrieval Augmentation generation (RAG) with LLM
             - Data Extraction
             - Feature Engineering
             - Exploratory Data Analysis
-            - Model Building and logging
-            - Model deployment
-            - Scorecard creation
-            - Swap in - swap out Analysis""")
+            - Machine Learning Model Building and logging
+            - Predictive Modelling""")
     with right_column:
         st.write("""
+            - Statistical Analysis
+            - Hypothesis and A/B testing
+            - Model deployment
             - Ray Parallel processing
-            - Applying Statistical methods
             - Models Evaluation Framework
             - Optuna parameter tuning
-            - OpenAI API using LangChain""")
+            - Model Scorecard creation
+            - Swap in - swap out Analysis""")
 
 with st.container():
     st.write("---")
     st.header("Professional Experience 👩‍💻")
+    columns = st.columns([0.2,0.8])
+    with columns[0]:
+        st.image("images/cloutics-logo.png", width=200, )
+    with columns[1]:
+        st.subheader("Cloutics Coders Inc - Data Scientist")
+        st.caption("Feb 2024 - Current")
+    st.write("""Cloutics delivers digital transformation, customized business solutions and builds technology solutions for business processes and deliver end-to-end, business software solutions for industry verticals that enable companies to increase efficiency, improve performance and build competitive advantage.""")
+    with st.expander("See experience"):
+        # tab1, tab2, tab3 = st.tabs(["Tab 1", "Tab 2", "Tab 3"])
+        # with tab1:
+        st.write("""
+                - Worked on GenAI with LLM using RAG, for creating a Chat Assistant for internal project documentation. 
+                - Developed API Interface (With Flask API) for HR portal for all the recruiters to query  the HR policies , employee related information and other documentation with  GenAI with LLM using RAG.
+                - Prepared and processed data optimal for analysis from Redshift and MySQL databases.
+                - Analysed the data and found few variables which can reduce the customers risk upto 5% if feature engineered properly and feature engineered them and also explored optimal machine learning algorithms to get the most insights out of the data to predict the customer behaviour in the future.
+                - Built a classification and regression customer finance model on the cleaned data and was able to segregate 10% of the customers that might go risky in the future using KS, precision and recall metrics. - I also found the parameters that are causing the major impacts and suggested relevant strategies to improve using Python and RedShift. Worked on AWS EC2 and S3 servers.
+                """)
+            
     columns = st.columns([0.2,0.8])
     with columns[0]:
         st.image("images/ADF_logo.jpg", width=200, )
@@ -112,7 +136,8 @@ with st.container():
                     - Worked on GenAI with LLM in generating automated NOAA (Notice of Adverse Action) decline translations. I framed the prompt to get the proper decline code and translations based on our independent variables and their predefined descriptions, and prompted OpenAI API with GPT-3.5 model using LangChain framework. The prompt was framed in a way to generate user friendly reasons for over 5000 variables  and we achieved 75% accuracy which avoided manual framing of the decline reasons. The entire flow was exposed as HTTP Endpoint using Flask internally.""")
         with tab2:
             st.write("""
-                    - Created an automated model evaluation framework that evaluates the newly added models and also suggests how the newly added models perform well on top of the existing ones. It also suggests the retirement of existing models if necessary. 
+                    - Created an automated model evaluation framework that evaluates the newly added models and also suggests how the newly added models perform well on top of the existing ones. It also suggests the retirement of existing models if necessary. This framework reduced around 30% of the manual workload
+of the data scientists.
                     - Responsible for maintaining the Underwriting and the production script logic and models.
                     - Can make data-driven decisions by monitoring credit risk, exploring, transforming and analyzing large loan data sets, their default rates(PD, SMM) and presenting, which results in changing the operational settings in Underwriting based on the current scenario.
                     - Performed significance test to see if the reduction in risk is significant if a new rule is added in Underwriting""")
@@ -214,6 +239,22 @@ with st.container():
         <div class="container">
             <div class="row">
                 <div class="col-md-4 mb-4">
+                    <a href="https://github.com/hari04hp/langchain-weather-tool-calling/blob/main/demo/Capture_1.png"
+                        class="text-decoration-none">
+                        <div class="card project-card position-relative">
+                            <img src='data:image/png;base64,{3}'
+                                class="card-img-top" alt="Project 2 Image">
+                            <div class="project-name"> Conversational Weather Agent with LangChain Tool Calling</div>
+                            <div class="card-body">
+                                <h5 class="card-title d-none">Case study - cyclistic
+                                    bike share analysis</h5>
+                                <p class="card-text text-light">
+                                    A conversational weather agent using LangChain tool calling to answer natural language queries about current weather and 5-day forecast for any city/zipcode.</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-4 mb-4">
                     <a href="About_My_Assistant" target='_self'
                         class="text-decoration-none">
                         <div class="card project-card position-relative">
@@ -261,22 +302,6 @@ with st.container():
                                     Cyclistic on maximizing the number of annual
                                     memberships. The Case Study is published in
                                     RPubs, Kaggle and github.</p>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <a href="https://github.com/hari04hp/langchain-weather-tool-calling/blob/main/demo/Capture_1.png"
-                        class="text-decoration-none">
-                        <div class="card project-card position-relative">
-                            <img src='data:image/png;base64,{3}'
-                                class="card-img-top" alt="Project 2 Image">
-                            <div class="project-name"> Conversational Weather Agent with LangChain Tool Calling</div>
-                            <div class="card-body">
-                                <h5 class="card-title d-none">Case study - cyclistic
-                                    bike share analysis</h5>
-                                <p class="card-text text-light">
-                                    A conversational weather agent using LangChain tool calling to answer natural language queries about current weather and 5-day forecast for any city/zipcode.</p>
                             </div>
                         </div>
                     </a>
