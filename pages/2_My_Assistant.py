@@ -11,9 +11,13 @@ from openai import AuthenticationError
 import os
 from streamlit_lottie import st_lottie
 
+from dotenv import load_dotenv
+load_dotenv()
+from pinecone import Pinecone
+pc = Pinecone(api_key=os.getenv("PINECONE_API_KEY"))
 
 def configure_retriever(index_name):
-    embeddings = HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
+    embeddings = HuggingFaceEmbeddings(model_name="all-MiniLM-L12-v1")
 
     docsearch = pc_vector.from_existing_index(index_name, embeddings)
     retriever = docsearch.as_retriever(search_type="mmr")
@@ -85,7 +89,7 @@ def load_lottieurl(url: str):
 python_lottie = load_lottieurl("https://assets6.lottiefiles.com/packages/lf20_2znxgjyt.json")
 my_sql_lottie = load_lottieurl("https://assets4.lottiefiles.com/private_files/lf30_w11f2rwn.json")
 ml_lottie = load_lottieurl("https://lottie.host/30f7a673-5d1a-4a83-b694-0361c985b506/Ik5pQjtkjb.json")
-
+open_ai_img = "images/openAI.jpg"
 
 with st.container():
     st.sidebar.image("images/my-image-2.jpg")
@@ -100,11 +104,14 @@ with st.container():
         <a href="https://www.linkedin.com/in/haripriyar" class="text-decoration-none text-light"><i class="fab fa-linkedin contact-icons1" style="font-size: 50px;"></i></a>""",unsafe_allow_html=True,)
     
     with st.sidebar:
-        dict_of_lotties = {"python": python_lottie, "mysql": my_sql_lottie, "ml": ml_lottie}
+        dict_of_lotties = {"python": python_lottie, "mysql": my_sql_lottie, "ml": ml_lottie, "openAI": open_ai_img}
         columns = st.columns(len(dict_of_lotties))
         for index,column in enumerate(columns):
             with column:
-                st_lottie(dict_of_lotties[list(dict_of_lotties.keys())[index]], height=70,width=70, key=list(dict_of_lotties.keys())[index], speed=2.5)
+                if index < 3:
+                    st_lottie(dict_of_lotties[list(dict_of_lotties.keys())[index]], height=70,width=70, key=list(dict_of_lotties.keys())[index], speed=2.5)
+                else:
+                    st.image(dict_of_lotties[list(dict_of_lotties.keys())[index]],width=70, )
 
 st.warning("""⚠ ***Disclaimer: Using this chatbot can cost around \\$0.01 to \\$0.05 per query. It also stores and uses the previous questions to prompt each question.***""")
 
@@ -132,7 +139,7 @@ if username and openai_api_key.startswith('sk-'):
     # print(msgs.messages)
     if len(msgs.messages) == 0 or button_status:
         msgs.clear()
-        msgs.add_ai_message("How can I help you?")
+        msgs.add_ai_message("I can answer any question about Haripriya Rajendran. How can I help you?")
     avatars = {"human": "user", "ai": "assistant"}
     for msg in msgs.messages:
         st.chat_message(avatars[msg.type]).write(msg.content)

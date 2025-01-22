@@ -3,8 +3,9 @@ import sys
 
 from dotenv import load_dotenv
 from langchain_community.document_loaders import PyPDFLoader
-from langchain_community.embeddings import HuggingFaceEmbeddings
+from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_community.vectorstores import Pinecone as pc_vector
+from langchain.text_splitter import RecursiveCharacterTextSplitter
 
 load_dotenv()
 
@@ -19,6 +20,9 @@ def create_embeddings(file):
     loader = PyPDFLoader(file)
     docs.extend(loader.load())
 
+    # Split documents
+    text_splitter = RecursiveCharacterTextSplitter(chunk_size=1500, chunk_overlap=200)
+    splits = text_splitter.split_documents(docs)
 
     # Create embeddings and store in vectordb
     # Using HuggingFaceEmbeddings because it's free
@@ -28,11 +32,13 @@ def create_embeddings(file):
     # First, check if our index already exists. If it doesn't, we create it
     # pc.delete_index(index_name)
     if not pc.list_indexes():
-        create_index(index_name, docs, embeddings)
+        # create_index(index_name, docs, embeddings)
+        create_index(index_name, splits, embeddings)
     else:
         for each_index in pc.list_indexes():
             if index_name != each_index['name']:#pinecone.list_indexes():
-                create_index(index_name, docs, embeddings)
+                # create_index(index_name, docs, embeddings)
+                create_index(index_name, splits, embeddings)
             else:
                 print("Index already exists.")
                 break
