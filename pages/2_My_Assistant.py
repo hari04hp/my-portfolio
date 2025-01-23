@@ -132,11 +132,24 @@ if username and openai_api_key.startswith('sk-'):
     )#, max_tokens=35
     
     #with chat history
-    qa_chain = ConversationalRetrievalChain.from_llm(
-        llm, retriever=configure_retriever(index_name), memory=memory, verbose=True
+    from langchain_core.prompts import ChatPromptTemplate
+    from langchain_core.prompts import MessagesPlaceholder
+    system_prompt = "You are A CHAT ASSISTANT even with or without context and you are NOT Haripriya. You are supposed to answer the questions asked only about Haripriya and you are NOT Haripriya. Use the following pieces of retrieved context to answer the question.\n\n{context}"
+    qa_prompt = ChatPromptTemplate.from_messages(
+    [
+        ("system", system_prompt),
+        ("human", "{question}"),
+    ]
     )
-    # qa_chain = 
-    # print(msgs.messages)
+    
+    
+    #existing
+    qa_chain = ConversationalRetrievalChain.from_llm(
+        llm, retriever=configure_retriever(index_name), memory=memory, verbose=True,
+        combine_docs_chain_kwargs={"prompt": qa_prompt},
+    )
+    
+
     if len(msgs.messages) == 0 or button_status:
         msgs.clear()
         msgs.add_ai_message("I can answer any question about Haripriya Rajendran. How can I help you?")
