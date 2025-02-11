@@ -17,7 +17,8 @@ from pinecone import Pinecone
 pc = Pinecone(api_key=os.getenv("PINECONE_API_KEY"))
 
 def configure_retriever(index_name):
-    embeddings = HuggingFaceEmbeddings(model_name="all-MiniLM-L12-v1")
+    # embeddings = HuggingFaceEmbeddings(model_name="all-MiniLM-L12-v1")
+    embeddings = HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
 
     docsearch = pc_vector.from_existing_index(index_name, embeddings)
     retriever = docsearch.as_retriever(search_type="mmr")

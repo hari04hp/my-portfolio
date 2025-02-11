@@ -3,3 +3,5 @@ files/
 local_sqlite_db.db
 some_additional.txt
 .vscode/
+contexts_for_testing.py
+.deepeval_telemetry.txt
