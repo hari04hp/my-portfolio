@@ -32,3 +32,13 @@ https://haripriya-rajendran-portfolio.streamlit.app/
 ## Licenses:
 This project is licensed under the MIT License - see the LICENSE file for details.
 
+
+
+# RAG Evaluation
+Evaluated the context retrieval and the answer relevance with Non-LLM and LLM evaluations but altering the chunk size, the embedding model, but finally when LLM evaluations were done using deepeval, I found that the contexts were the main issue.
+
+Refer [Old Context Format's Image](images/old_context_format_pdf.png)
+
+You can see that there are so many spacings. This happens in the same way when we copy texts from pdf directly and paste it. This is because PDFs can contain formatting codes that don't translate perfectly when pasted into other applications, leading to extra spaces or line breaks. The same scenario is happening in this pdf conversion to embedding as well. This fogs the actual context retrieval.
+
+So when I convert it to use embeddings created from word document, everything was better. See [New Context Format's Image](images/new_context_format_word_1.png), [New Context Format's Image 2](images/new_context_format_word_2.png)

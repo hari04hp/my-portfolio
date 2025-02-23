@@ -5,3 +5,6 @@ some_additional.txt
 .vscode/
 contexts_for_testing.py
 .deepeval_telemetry.txt
+cell_outs_Eval.txt
+actual_out.txt
+RAG_evaluation copy.ipynb
