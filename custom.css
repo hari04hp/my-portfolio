@@ -1,9 +1,9 @@
 .output_wrapper, .output {
     height: auto !important;
-    max-height: 300px;  /* Adjust the max-height as needed */
+    max-height: 150px;  /* Adjust the max-height as needed */
     overflow-y: scroll !important;
 }
 .output_scroll {
     box-shadow: none !important;
-    webkit-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
 }
